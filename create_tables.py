@@ -1,17 +1,13 @@
 import sqlite3
 
-conn = sqlite3.connect('carlot.sqlite')
+conn = sqlite3.connect('courses.sqlite')
 
 c = conn.cursor()
 c.execute('''
-          CREATE TABLE cars
-          (id INTEGER PRIMARY KEY ASC,
-           timestamp DATETIME NOT NULL,
-           make VARCHAR(250) NOT NULL,
-           model VARCHAR(250) NOT NULL,           
-           year INTEGER NOT NULL,
-           price REAL NOT NULL
-          )
+          CREATE TABLE courses
+          (id INTEGER PRIMARY KEY ASC, 
+           x INTEGER NOT NULL,
+           y INTEGER NOT NULL)
           ''')
 
 conn.commit()
