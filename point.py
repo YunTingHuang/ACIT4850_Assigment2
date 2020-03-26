@@ -1,5 +1,3 @@
-"""This is base.py"""
-
 from sqlalchemy import Column, Integer
 from base import Base
 
